@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wizard/CLionProjects/MyTonaTest/Solution.cpp
+Solution.h
+/home/wizard/CLionProjects/MyTonaTest/Solution.h
+
+/home/wizard/CLionProjects/MyTonaTest/Solution.h
+string
+-
+Task.h
+/home/wizard/CLionProjects/MyTonaTest/Task.h
+
+/home/wizard/CLionProjects/MyTonaTest/Task.cpp
+Task.h
+/home/wizard/CLionProjects/MyTonaTest/Task.h
+fstream
+-
+iostream
+-
+
+/home/wizard/CLionProjects/MyTonaTest/Task.h
+string
+-
+
+/home/wizard/CLionProjects/MyTonaTest/main.cpp
+iostream
+-
+fstream
+-
+Task.h
+/home/wizard/CLionProjects/MyTonaTest/Task.h
+

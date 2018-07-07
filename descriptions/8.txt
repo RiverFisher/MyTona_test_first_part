@@ -1,0 +1,46 @@
+Вопрос 8:
+Что выведет программа и почему?
+
+//A.h
+#include <map>
+
+class B;
+
+class A {
+public:
+    A() {}
+    ~A();
+    std::map<int, B*> someContainer;
+};
+
+//A.cpp
+#include "A.h"
+
+A::~A() {
+    for (auto it = someContainer.begin(); it != someContainer.end(); ++it) {
+        delete it->second;
+    }
+    someContainer.clear();
+}
+
+//B.h
+#include <stdio.h>
+
+class B {
+public:
+    B() { printf("c"); }
+    ~B() { printf("d"); }
+};
+
+//main.cpp
+#include "A.h"
+#include "B.h"
+
+int main(int argc, char** argv) {
+    A* a = new A();
+    for(int i = 0; i < 5; ++i) {
+        a->someContainer[i] = new B();
+    }
+    delete a;
+    return 0;
+}

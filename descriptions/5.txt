@@ -1,0 +1,10 @@
+Вопрос 5:
+Какое максимальное и минимальное значения может вернуть функция?
+int someFunc() {
+    srand(time(NULL));
+    int result = 0;
+    for(int i = 0; i < 100; ++i) {
+        int result += rand() % 2;
+    }
+    return result;
+}

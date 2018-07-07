@@ -1,0 +1,22 @@
+Вопрос 2:
+Исправьте программу. Что выведет программа после исправления и почему?
+#include <stdio.h>
+
+class A {
+public:
+    A() {
+        someValue++;
+        child = nullptr;
+    }
+    ~A() {}
+    int someValue;
+    static A* child;
+};
+
+A* A::child = new A();
+
+int main(int argc, char** argv) {
+    A* a = new A();
+    printf("%d", a->child->someValue);
+    return 0;
+}
